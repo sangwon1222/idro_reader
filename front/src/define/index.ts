@@ -1,6 +1,6 @@
 const define = [
-  { label: "버저음 켜기", eventName: "onBuzzer", common: "buzzer" },
-  { label: "버저음 끄기", eventName: "offBuzzer", common: "buzzer" },
+  { label: "버저음 켜기", eventName: "onBuzzer" },
+  { label: "버저음 끄기", eventName: "offBuzzer" },
   { label: "RFID 스캔 시작", eventName: "startReadRFID" },
   { label: "RFID 스캔 정지", eventName: "stopReadRFID" },
   { label: "1번 안테나 활성화", eventName: "onAtn1", common: "onAntenna" },

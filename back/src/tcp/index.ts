@@ -54,10 +54,12 @@ class TCP {
   }
 
   async onBuzzer() {
+    console.log(packet.onBuzzer);
     this.mTcp.write(packet.onBuzzer);
   }
 
   async offBuzzer() {
+    console.log(packet.offBuzzer);
     this.mTcp.write(packet.offBuzzer);
   }
 }

@@ -23,13 +23,19 @@ class SocketIO {
       });
 
       socket.on("onBuzzer", () => this.onBuzzer());
+      socket.on("offBuzzer", () => this.offBuzzer());
+
       socket.on("onAntenna", (mode) => this.onAntenna(mode));
       socket.on("startReadRFID", () => this.startReadRFID());
+      socket.on("stopReadRFID", () => this.stopReadRFID());
     });
   }
 
   async onBuzzer() {
     SocketManager.handle.tcp.onBuzzer();
+  }
+  async offBuzzer() {
+    SocketManager.handle.tcp.offBuzzer();
   }
 
   async onAntenna(mode: string) {
@@ -37,6 +43,9 @@ class SocketIO {
   }
   async startReadRFID() {
     SocketManager.handle.tcp.startReadRFID();
+  }
+  async stopReadRFID() {
+    SocketManager.handle.tcp.stopReadRFID();
   }
 }
 
